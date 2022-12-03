@@ -1,0 +1,8 @@
+<div class="alert"
+     [ngClass]="
+     {'alert--error' : alert?.type === 'error',
+     'alert--info' : alert?.type === 'info',
+     'alert--success' : alert?.type === 'success'}">
+    <p>{{ alert?.message }}</p>
+    <p *ngIf="alert?.isCountDown">Redirection dans {{ counter }}s</p>
+</div>

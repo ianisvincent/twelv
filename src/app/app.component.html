@@ -1,0 +1,7 @@
+<!-- Interactive logo -->
+<app-logo (displayAlert)="onDisplayAlert($event)"
+          (displayDialog)="onToggleDialog()"></app-logo>
+<!-- Dialog -->
+<app-dialog *ngIf="isDialogDisplayed" [dialog]="dialog" (closeDialog)="onToggleDialog()"></app-dialog>
+<!-- Alert -->
+<app-alert *ngIf="isAlertDisplayed" [alert]="alert" (countDownFinished)="onCountDownFinished()"></app-alert>

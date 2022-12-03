@@ -1,0 +1,19 @@
+<div class="wrapper">
+    <!-- Background -->
+    <div class="background" (click)="displayAlert.emit(alertTypeEnum.Info)"
+    [ngClass]="{'background--spin' : isBulletClicked }">
+        <!-- Letter -->
+        <div class="letter">
+            <div class="letter__horizontal-bar" (click)="displayAlert.emit(alertTypeEnum.Error)"></div>
+            <div class="letter__vertical-bar" (click)="displayAlert.emit(alertTypeEnum.Error)"></div>
+        </div>
+        <!-- Bullet -->
+        <div class="background__bullet"
+             (mouseover)="onBulletHovered()" (mouseleave)="onBulletHovered()"
+             (click)="isBulletHovered && displayAlert.emit(alertTypeEnum.Success); onBulletClicked()"></div>
+    </div>
+    <!-- Brand -->
+    <h1 class="brand" (click)="displayAlert.emit(alertTypeEnum.Success)">Twelv.</h1>
+    <!-- Slogan -->
+    <h1 class="slogan" (click)="displayDialog.emit()">transformation collaborative</h1>
+</div>

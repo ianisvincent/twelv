@@ -1,0 +1,48 @@
+@import 'src/styles';
+@import 'src/styles/colors';
+
+.dialog {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 400px;
+  transform: translate(-50%, -50%);
+  background-color: $secondary-color;
+  padding: 24px;
+  border-radius: 10px;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+
+  &__header {
+    font-family: "Montserrat", sans-serif;
+    margin: 16px;
+    font-style: italic;
+    font-weight: 900;
+  }
+
+  &__text {
+    font-family: "Montserrat", sans-serif;
+    margin: 16px;
+  }
+
+  &__actions {
+    margin: 16px 0 0;
+  }
+}
+
+
+button {
+  background-color: $primary-color;
+  border: none;
+  padding: 10px 40px;
+  border-radius: 8px;
+  color: $secondary-color;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $primary-hover-color;
+  }
+}

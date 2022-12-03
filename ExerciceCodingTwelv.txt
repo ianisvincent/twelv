@@ -1,0 +1,15 @@
+				*****************************************
+				*			Twelv coding test			*
+				*****************************************
+				
+	L'exercice, si vous l'acceptez, est de reproduire le logo de Twelv sur une page, de manière interractive.
+	Le logo doit se trouver au centre de la page et avoir une largeur et une hauteur identique, de 50% de la page.
+	Chaque élément du logo doit avoir une interraction possible.
+	L'objectif est d'avoir une navigation vers le site www.twelv.fr, une popup custom, une gestion d'alerte.
+	Le T doit être formé de 2 éléments, l'un pour la barre verticale, l'autre pour la barre horizontale.
+	La navigation vers le site de twelv doit se faire sur le click du background du logo.
+	Le reste des actions est libre.
+	N'oubliez pas le '.'
+	
+	Le but est surtout de voir votre manière d'organiser du code et votre capacité à écrire du code lisible.
+	Vous devrez me retourner un projet angular executable via un ide.

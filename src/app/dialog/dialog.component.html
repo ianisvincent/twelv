@@ -1,0 +1,9 @@
+<div class="dialog">
+    <div class="dialog__header">{{ dialog?.title }}</div>
+    <div class="dialog__text">
+        {{ dialog?.message }}
+    </div>
+    <div class="dialog__actions">
+        <button (click)="closeDialog.emit()">OK</button>
+    </div>
+</div>
