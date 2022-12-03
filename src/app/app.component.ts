@@ -13,7 +13,8 @@ export class AppComponent {
     public alert: Alert | undefined;
     public dialog: Dialog | undefined;
     public isDialogDisplayed = false;
-    public isAlertDisplayed = false;
+    public alertList: Alert[] = [];
+    private readonly websiteUrl = 'https://www.twelv.fr'
 
     constructor(private alertService: AlertService,
                 private dialogService: DialogService) {
@@ -21,13 +22,7 @@ export class AppComponent {
     }
 
     onDisplayAlert(alertType: AlertType): void {
-        if (!this.isAlertDisplayed) {
-            this.alert = this.alertService.createAlert(alertType);
-            this.isAlertDisplayed = true;
-            setTimeout(() => {
-                this.isAlertDisplayed = false;
-            }, this.alertService.displayDelay);
-        }
+        this.alertList.push(this.alertService.createAlert(alertType));
     }
 
     onToggleDialog(): void {
@@ -35,6 +30,6 @@ export class AppComponent {
     }
 
     onCountDownFinished(): void {
-        window.location.href = 'https://www.twelv.fr';
+        window.location.href = this.websiteUrl;
     }
 }

@@ -5,10 +5,6 @@ import { Alert, AlertType } from './alert';
     providedIn: 'root'
 })
 export class AlertService {
-    readonly displayDelay = 4000;
-
-    constructor() {
-    }
 
     createAlert(alertType: AlertType): Alert {
         switch (alertType) {

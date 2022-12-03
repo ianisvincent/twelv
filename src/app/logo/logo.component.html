@@ -1,9 +1,9 @@
 <div class="wrapper">
     <!-- Background -->
-    <div class="background" (click)="displayAlert.emit(alertTypeEnum.Info)"
+    <div class="background" (click)="!isBulletHovered && displayAlert.emit(alertTypeEnum.Info)"
     [ngClass]="{'background--spin' : isBulletClicked }">
         <!-- Letter -->
-        <div class="letter">
+        <div class="letter" (click)="$event.stopPropagation()">
             <div class="letter__horizontal-bar" (click)="displayAlert.emit(alertTypeEnum.Error)"></div>
             <div class="letter__vertical-bar" (click)="displayAlert.emit(alertTypeEnum.Error)"></div>
         </div>

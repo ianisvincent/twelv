@@ -7,15 +7,12 @@
   justify-content: center;
   padding: 16px;
   border-radius: 6px;
-  min-width: 400px;
-  max-width: 600Px;
+  width: 600px;
   height: 80px;
-  position: absolute;
-  right: 24px;
-  top: 24px;
   font-family: "Montserrat", sans-serif;
   animation-name: slide-up;
   animation-duration: 200ms;
+  margin: 10px 0;
 
   p {
     margin: 4px 0;

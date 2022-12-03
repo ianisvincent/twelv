@@ -9,20 +9,33 @@ import { Alert } from './alert';
 export class AlertComponent implements OnInit {
     @Input() alert: Alert | undefined;
     @Output() countDownFinished = new EventEmitter();
-    public counter = 3;
+    public redirectCounter = 3;
+    public isDisplayed: boolean = true;
+    private readonly displayDelay = 3000;
 
     constructor() {
     }
 
     ngOnInit(): void {
+        this.startDisplayTimer();
         if (this.alert?.isCountDown) {
-            let intervalId = setInterval(() => {
-                this.counter = this.counter - 1;
-                if (this.counter === 0) {
-                    clearInterval(intervalId)
-                    this.countDownFinished.emit();
-                }
-            }, 1000)
+            this.startCountDown();
         }
+    }
+
+    private startDisplayTimer(): void {
+        setTimeout(() => {
+            this.isDisplayed = false;
+        }, this.displayDelay);
+    }
+
+    private startCountDown(): void {
+        let intervalId = setInterval(() => {
+            this.redirectCounter = this.redirectCounter - 1;
+            if (this.redirectCounter === 0) {
+                clearInterval(intervalId)
+                this.countDownFinished.emit();
+            }
+        }, 1000)
     }
 }

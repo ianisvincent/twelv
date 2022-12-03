@@ -1,8 +1,9 @@
 <div class="alert"
+     *ngIf="isDisplayed"
      [ngClass]="
      {'alert--error' : alert?.type === 'error',
      'alert--info' : alert?.type === 'info',
      'alert--success' : alert?.type === 'success'}">
     <p>{{ alert?.message }}</p>
-    <p *ngIf="alert?.isCountDown">Redirection dans {{ counter }}s</p>
+    <p *ngIf="alert?.isCountDown">Redirection dans {{ redirectCounter }}s</p>
 </div>

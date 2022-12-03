@@ -4,4 +4,9 @@
 <!-- Dialog -->
 <app-dialog *ngIf="isDialogDisplayed" [dialog]="dialog" (closeDialog)="onToggleDialog()"></app-dialog>
 <!-- Alert -->
-<app-alert *ngIf="isAlertDisplayed" [alert]="alert" (countDownFinished)="onCountDownFinished()"></app-alert>
+<div class="alerts">
+    <div *ngFor="let alert of alertList">
+        <app-alert [alert]="alert" (countDownFinished)="onCountDownFinished()"></app-alert>
+    </div>
+</div>
+
